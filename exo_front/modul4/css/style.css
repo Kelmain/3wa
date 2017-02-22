@@ -1,0 +1,168 @@
+html {
+    background-image: url(../img/fond.png);
+    font-family: 'Open Sans', serif;
+}
+
+body {
+    margin: 3.75em auto;
+}
+
+header {
+    border-bottom: solid;
+    border-top: solid;
+    border-color: #1B9CA2;
+    text-align: center;
+    background-color: #25B3B4;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+main,
+footer {
+    max-width: 800px;
+    margin: 1.5em auto;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 0.8em;
+    padding-bottom: 2em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Slabo 27px', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+h2 span {
+    color: #25B3B4;
+    padding-left: 3px;
+}
+
+aside h3 span {
+    color: #71CACA;
+}
+
+aside h3 {
+    font-size: 1.1em;
+}
+
+aside h4 i {
+   padding-right: 0.2em;    
+    
+}
+
+h4 span {
+    color: #71CACA;
+}
+
+p {
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    color: #53676D;
+}
+
+#contenue {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 68%;
+    background-color: #B6DFDD;
+    vertical-align: top;
+}
+
+.menu {
+    width: 45%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 0.3em 1em 0.1em;
+    margin-left: 0.5em;
+}
+
+#aside {
+    display: inline-block;
+    width: 30%;
+    background-color: #25B3B4;
+    box-sizing: border-box;
+    color: white;
+    vertical-align: top;
+    border: solid;
+    border-color: #1B9CA2;
+    padding: 1em 1em 0 1em;
+    margin-left: 0.5em;
+}
+
+.news {
+    font-size: 0.8em;
+    color: white;
+}
+
+.button {
+    background-color: #25B3B4;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin-right: 0.8em;
+    margin-top: 1em;
+    float: right;
+}
+
+IMG.displayed {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+P.footer {
+    text-align: center;
+    font-size: 0.75em;
+}
+
+.logo {
+    float: right;
+    margin-right: -75px;
+    margin-top: -50px;
+}
+
+.main {
+    padding-top: 3em;
+}
+
+#blue {
+    color: #25B3B4;
+}
+
+.menuimg {
+    border-radius: 50%;
+    float: left;
+    padding-right: 0.4em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+}

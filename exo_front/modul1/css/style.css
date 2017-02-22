@@ -1,0 +1,59 @@
+body {
+    width: 800px;
+    margin: auto;
+}
+
+#color p span {
+  font-family: arial;
+}
+
+.red  {
+	 color: red;
+}
+
+.blue  {
+	 color: blue;
+}
+
+.green {
+	 color: green;
+}
+
+#background p span {
+  font-family: monospace;
+}
+
+.bred {
+	 background-color: red;
+
+}
+
+.bblue {
+	 background-color: blue;
+
+}
+
+.bgreen {
+	 background-color: green;
+
+}
+
+span {
+
+	color: gray;
+}
+
+
+
+IMG.displayed {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
+P.footer {
+      text-align: center;
+      font-size: 9px;
+
+}

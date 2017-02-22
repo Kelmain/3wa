@@ -1,0 +1,189 @@
+/* LICENCE */
+
+#licence {
+    display: block;
+    text-align: center;
+    padding: 25px;
+}
+
+#licence img {
+    width: 50px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    /*text-shadow: 0px 0.05em 0px rgb(255, 255, 255);*/
+    font-size: 0.9em;
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #F2F1F4;
+    color: #898B8E;
+        
+}
+
+header {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    background-color: #30A894;
+    margin-left: 0.8em;
+    color: white;
+    font-size: 1.3em;
+}
+
+nav > ul > li {
+    display: inline-block;
+    vertical-align: top;
+
+    margin-right: 1em;
+}
+
+nav > ul >  a {
+    display: inline-block;
+    padding: 1em 1em 1em 1em;
+    color: white;
+
+}
+nav > ul >  a:hover {
+    background-color: rgba(255,255,255,0.3);
+    
+}
+
+section {
+    width: 68%;
+    float: left;
+    margin: 1em;
+}
+
+section>img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    background-color: #30A894;
+    color: #fff;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h1 {
+    padding: 0.2em 0 0.2em 0.2em;
+    font-size: 1.4em;
+}
+
+aside {
+    background-color: #B8DCB1;
+    float: right;
+    width: 26%;
+    padding: 0 0.7em 3em 0.7em;
+    color: #607E60;
+    }
+
+p {
+    text-align: justify;
+    font-size: 1.7vh;
+}
+aside>h3 {
+    padding: 0.2em 0 0.2em 0.3em;
+}
+
+.clear {
+    clear: both;
+}
+
+@media print,
+screen and (max-width:1200px) {
+    body {
+        line-height: 1.4em;
+        width: 100%;
+    }
+    header >img {
+        width: 43.5%;
+        margin: 0 auto -0.3em
+    }
+    section {
+        width: 60%;
+    }
+    aside {
+        width: 30%;
+    }
+}
+
+@media print,
+screen and (max-width:640px) {
+    body {
+        line-height: 1.4em;
+        width: 100%;
+    }
+    header >img {
+        width: 43.5%;
+        margin: 0 auto -0.3em
+    }
+    section {
+        float: none;
+        width: 100%;
+        margin: 1em 0 1em 0;
+    }
+    aside {
+        float: none;
+        width: 100%;
+        
+    }
+    aside>h3 {
+       margin-top: 1em;
+    }
+    nav ul {
+        width: 100%;
+        margin: 0;
+    }
+    nav>ul>a {
+        display: block;
+     
+        margin-right: 0;
+    }
+}
+
+@media print,
+screen and (max-width:480px) {
+    header img {
+        width: 58.5%;
+    }
+    section {
+        float: none;
+        width: 100%;
+    }
+    aside {
+        display: none
+    }
+    nav ul li {
+        display: block;
+    }
+}
+
+@media print,
+screen and (max-width:360px) {
+    header img {
+        width: 58.5%;
+    }
+    section {
+        float: none;
+    }
+    aside {
+        display: none
+    }
+    nav ul li {
+        display: block;
+    }
+}

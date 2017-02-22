@@ -1,0 +1,157 @@
+ * {
+-    box-sizing: border-box;
++  box-sizing: border-box;
+ }
+ 
+ body {
+ @@ -16,95 +16,93 @@ body {
+   overflow-x: hidden;
+ }
+ 
+-/* Form */
+-
+ .container {
+-    position: relative;
+-    width: 500px;
+-    height: 220px;
+-    margin: 0 auto;
+-    color: #575e72;
+-    background: #262b37;
+-    padding: 50px;
+-    padding-top: 20px;
++  position: relative;
++  width: 500px;
++  height: 220px;
++  margin: 0 auto;
++  color: #575e72;
++  background: #262b37;
++  padding: 50px;
++  padding-top: 20px;
+ }
+ 
+ #result {
+-    position: relative;
+-    width: 400px;
+-    height: 50px;
+-    margin: 20px auto;
+-    color: #575e72;
+-    background: #262b37;
+-    padding: 13px;
+-    text-align: center;
+-    border-radius: 15px;
+-    display: none;
++  position: relative;
++  width: 400px;
++  height: 50px;
++  margin: 20px auto;
++  color: #575e72;
++  background: #262b37;
++  padding: 13px;
++  text-align: center;
++  border-radius: 15px;
++  display: none;
+ }
+ 
+ input, select {
+-    width: 400px;
+-    height: 50px;
+-    padding: 0 18px;
+-    background: #474d5d;
+-    border: 0;
+-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+-    font-size: 16px;
+-    outline: none;
+-    color: #92959e;
+-    text-align: center;
+-    margin-bottom: 16px;
++  width: 400px;
++  height: 50px;
++  padding: 0 18px;
++  background: #474d5d;
++  border: 0;
++  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
++  font-size: 16px;
++  outline: none;
++  color: #92959e;
++  text-align: center;
++  margin-bottom: 16px;
+ }
+ 
+ select {
+-    text-align: left;
++  text-align: left;
+ }
+ 
+ option {
+-    height: 50px;
+-    padding: 0 18px;
++  height: 50px;
++  padding: 0 18px;
+ }
+ 
+ button {
+-    width: 400px;
+-    height: 50px;
+-    padding: 0;
+-    background: #00bdbd;
+-    border: 0;
+-    cursor: pointer;
+-    font-size: 16px;
+-    color: #FFF;
+-    line-height: 16px;
+-    text-align: center;
+-    margin-bottom: 16px;
++  width: 400px;
++  height: 50px;
++  padding: 0;
++  background: #00bdbd;
++  border: 0;
++  cursor: pointer;
++  font-size: 16px;
++  color: #FFF;
++  line-height: 16px;
++  text-align: center;
++  margin-bottom: 16px;
+ }
+ 
+ button:hover {
+-    background: #00dc7c;
+-    color: #FFF;
++  background: #00dc7c;
++  color: #FFF;
+ }
+ 
+ button:focus {
+-    outline:0;
++  outline:0;
+ }
+ 
+ p {
+-    margin: 5px;
+-    font-size: 16px;
+-    color: #92959e;
+-    line-height: 16px;
+-    text-align: center;
++  margin: 5px;
++  font-size: 16px;
++  color: #92959e;
++  line-height: 16px;
++  text-align: center;
+ }
+ 
+ span {
+-    line-height: 40px;
+-    display: inline-block;
++  line-height: 40px;
++  display: inline-block;
+ }
+ 
+ span .left {
+-    float: left;
++  float: left;
+ }
+ 
+ span .right {
+-    float: right;
++  float: right;
+ } 

@@ -1,0 +1,263 @@
+/* LICENCE */
+
+#licence {
+    display: block;
+    text-align: center;
+    padding: 25px;
+}
+
+#licence img {
+    width: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto Slab', serif;
+    font-size: 13px;
+    color: white;
+}
+
+body {
+    background-image: -webkit-linear-gradient(113deg, white 0%, white 15%, #E74258 15%, #E74258 30%, #4A2A39 30%, #4A2A39 100%);
+    background-image: -webkit-linear-gradient(307deg, white 0%, white 15.5%, #E74258 15.5%, #E74258 34%, #4A2A39 34%, #4A2A39 100%);
+    background-image: linear-gradient(143deg, white 0%, white 15.5%, #E74258 15.5%, #E74258 34%, #4A2A39 34%, #4A2A39 100%);
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3em;
+    width: 100%;
+    -o-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+}
+
+header>img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 18em;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10em;
+}
+
+nav ul li {
+    display: inline-block;
+    padding-right: 3em;
+}
+
+nav ul li a {
+    color: white;
+}
+
+.red {
+    border-color: red;
+    margin: 0 0.8em 0 0.8em;
+}
+
+#contenue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    color: #6A5C5F;
+}
+
+.flex_moto {
+    background-color: white;
+    width: 20%;
+    text-align: center;
+}
+
+p {
+    line-height: 1.8em;
+}
+
+.flex_moto p {
+    margin: 1em 0.8em 1.5em 0.8em;
+}
+
+.flex_img {
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    text-align: center;
+    color: red;
+    font-size: 2rem;
+}
+
+#presentation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+video {
+    width: 50%;
+    height: 50%;
+}
+
+.flex_presta {
+    width: 49%;
+    height: auto;
+}
+
+.fa {
+    color: #E74258;
+    font-size: 5em;
+}
+
+#social {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 40%;
+    height: 40%;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.bottom {
+    text-align: center;
+    margin-top: 5em;
+    color: #998891;
+}
+
+.bottom a {
+    color: white;
+    text-decoration: underline;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+span {
+    color: #F1C1C1;
+}
+
+a {}
+
+h2 {
+    margin-top: 2em;
+    font-size: 1.5em;
+}
+
+@media print,
+screen and (max-width:1200px) {
+    body {
+        line-height: 1.4em;
+        width: 100%;
+    }
+}
+
+@media print,
+screen and (max-width:640px) {
+    header img {
+        margin: 0;
+        float: left;
+    }
+    nav {
+        margin-left: 0;
+        margin-top: 1em;
+        float: right;
+    }
+    nav ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    nav>ul>li {
+        margin: 1em 1em 1.5em 0;
+        padding-right: 1em;
+        display: block;
+    }
+    nav>ul>li>a {
+        color: black;
+    }
+    .flex_moto {
+        width: 100%;
+        margin: 1em;
+    }
+    #social {
+        width: 100%;
+        height: 30%;
+        margin: 0 0 0 11em;
+    }
+    .flexslider {
+        clear: both;
+    }
+}
+
+@media print,
+screen and (max-width:480px) {
+    header img {
+        margin: 0;
+    }
+    .flexslider {
+        display: none;
+    }
+    nav ul li {
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media print,
+screen and (max-width:360px) {
+    .flexslider {
+        display: none;
+    }
+    .flex_moto {
+        width: 100%
+    }
+    nav ul li {
+        display: block;
+    }
+}

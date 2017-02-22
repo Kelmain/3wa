@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* LICENCE */
+
+#licence {
+    display: block;
+    text-align: center;
+    padding: 25px;
+}
+
+#licence img {
+    width: 50px;
+}

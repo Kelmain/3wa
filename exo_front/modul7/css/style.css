@@ -1,0 +1,111 @@
+/* LICENCE */
+#licence {
+    display: block;
+    text-align: center;
+    padding: 25px;
+}
+
+#licence img {
+    width: 50px;
+}
+
+header > h1 {
+
+    display: inline-block;
+    color:#A39FA6;
+    font-size: 1.4em;
+    vertical-align: middle;
+
+
+
+
+}
+    .clear {
+        clear: both;
+    }
+h2 {
+
+    color: #ACDEF7;
+    font-size: 1.5em;
+
+}
+
+#menu-deroulant, #menu-deroulant ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#menu-deroulant {
+/* on centre le menu dans la page */
+    text-align: center;
+}
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+}
+#menu-deroulant section div ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+}
+#menu-deroulant .title {
+    text-decoration: none;
+    display: block;
+	color:#26BDD3;
+    margin: 2em 2em 0 0;
+    padding: 0.2em;
+    font-size: 1.2em;
+}
+
+
+#menu-deroulant a {
+    text-decoration: none;
+    display: block;
+	color:#fff;
+
+}
+#menu-deroulant section {
+    position: absolute;
+    /* on cache les sous menus complètement sur la gauche */
+   left: -999em;
+
+    z-index: 1000;
+    background-color: #26BDD3;
+        text-align: center;
+    width: 100%;
+
+
+
+}
+
+#menu-deroulant  li:hover .title,
+#menu-deroulant li a:hover {
+    background-color: #26BDD3;
+    color:#fff;
+
+}
+    #menu-deroulant li:hover section {
+    /* Au survol des li du menu on replace les sous menus */
+    left: 0em;
+    right: 0em;
+
+
+}
+
+nav ul li section div ul > li{
+  padding-top: 0.8em;
+}
+
+nav section > div{
+
+    width:40%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 2em;
+}
+
+
+header > img {
+   display:inline-block;
+   vertical-align: middle;
+
+}

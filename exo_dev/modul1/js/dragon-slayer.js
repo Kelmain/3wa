@@ -33,9 +33,9 @@ function initGame() {
 
 
 
-    game = {}
+    game = {};
     game.round = 1;
-    3
+
 
     // choix du niveau// définir les pdv
     game.niveau = requestInteger('Choisissez le niveau de difficulté : 1. Débutant - 2.intermédiaire - 3.expert', 1, 3);
@@ -188,7 +188,7 @@ function gameLoop() {
 
             console.log(
                 'Le dragon est plus fort et vous defonce ' +
-                damagePoint + ' PV'
+                damagePoint + ' degats'
             );
         } else {
 
@@ -199,8 +199,8 @@ function gameLoop() {
 
 
             console.log(
-                'Vous ete plus fort et defonce le dragon' +
-                damagePoint + ' PV'
+                'Vous ete plus fort et defonce le dragon ' +
+                damagePoint + ' degats'
             );
         }
 
@@ -225,13 +225,13 @@ function showGameState() {
 
 function showGameWinner() {
     if (game.pvDragon <= 0) {
-        showImage('../images/knight.jpg');
+        showImage('images/knight.jpg');
 
-        console.log("VTu roxx !");
+        console.log("Tu roxx !");
         console.log("Il vous restait " + game.pvJoueur + " PV");
     } else // if(game.hpPlayer <= 0)
     {
-        showImage('../images/dragon.jpg');
+        showImage('images/dragon.jpg');
 
         console.log("YOU SUXX");
         console.log("Il restait " + game.pvDragon + " PV au dragon");

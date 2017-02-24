@@ -1,5 +1,8 @@
 'use strict';
-
+/*
+    global installEventHandler
+    global getRandomInteger
+*/
 
 const TESPACE = 32;
 const TGAUCHE = 37;
@@ -142,7 +145,7 @@ function onSliderToggle() {
 
         state.timer = window.setInterval(onSliderGoToNext, 2000);
 
-        this.title = 'ArrÃªter le carrousel';
+        this.title = 'Arreter le carrousel';
     } else {
 
         window.clearInterval(state.timer);
@@ -197,36 +200,9 @@ document.addEventListener('DOMContentLoaded', function () {
     installEventHandler('#slider-next', 'click', onSliderGoToNext);
     installEventHandler('#slider-toggle', 'click', onSliderToggle);
     installEventHandler('#toolbar-toggle', 'click', onToolbarToggle);
-
+    installEventHandler('#slider', 'wheel', rotateSlider);
 
     document.addEventListener('keyup', onSliderKeyUp);
 
     refreshSlider();
 });
-
-
-
-
-
-
-
-
-
-/*function rotateSlider(event) {
-    if (event.deltaY >= 0) {
-        this.style.transform += "rotate(10deg)";
-    } else {
-        this.style.transform += "rotate(-10deg)";
-    }
-    console.log(event);
-}
-
-*/
-function eventListener(selecteur, type, action) {
-    var objetDom;
-    objetDom = document.querySelector(selecteur);
-    objetDom.addEventListener(type, action);
-}
-
-
-eventListener('#slider', 'wheel', rotateSlider);

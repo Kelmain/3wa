@@ -13,3 +13,26 @@ function installEventHandler(selector, type, eventHandler) {
 
     domObject.addEventListener(type, eventHandler);
 }
+
+
+
+function requestInteger(message, min, max) {
+    var integer
+
+    do {
+        integer = parseInt(window.prompt(message));
+    }
+
+    while (isNaN(integer) || integer < 1 || integer > 3);
+
+    return integer;
+
+
+
+}
+
+
+
+function showImage(source) {
+    document.write('<img src="' + source + '">');
+}

@@ -42,7 +42,6 @@ header {
 
 .slider {
     -webkit-backface-visibility: hidden;
-    /* obligatoire pour Ã©viter l'effet de crÃ©nelage sous Chrome */
     text-align: center;
     -webkit-transform: rotate(-3deg);
     transform: rotate(-3deg);

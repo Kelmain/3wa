@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+
+    <title>Todo list</title>
+</head>
+
+<body>
+<header>
+    <h1>
+        Todo list
+    </h1>
+</header>
+<main>
+
+        <form method="post" action="inc/add.php">
+            <fieldset>
+           <input class="index" type="hidden" name="index" />
+            <label for="title" > Title </label><input type="text" name="title" value="" /></fieldset>
+                <fieldset>   <label for="message" > Description </label><textarea name="message" rows="10" cols="50"></textarea></fieldset>
+                    <fieldset>    <label for="date" > Date </label><input type="date" name="date" value="" /></fieldset>
+          <fieldset>
+           <label for="important" ></label>Important<input type="radio" name="important" value="3" />
+            <label for="important" ></label>Normal<input type="radio" name="important" value="2" />
+            <label for="important" ></label>pas important <input type="radio" name="important" value="1" />
+          </fieldset>
+                        <fieldset> <input type="submit" value="Enter" name="envoi" /></fieldset>
+           <!-- <button name="action" value="update">
+                <span>Update</span>
+            </button>
+
+            <button name="action" value="delete">
+                <span>Delete</span>
+            </button>
+
+            <button name="action" value="check">
+                <span>Check</span>
+            </button>-->
+        </form>
+
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <!--  <script src="js/general.js" ></script>-->
+</body>
+
+</html>

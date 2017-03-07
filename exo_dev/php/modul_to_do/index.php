@@ -1,5 +1,6 @@
 <?php
 include 'inc/utilities.php';
-$aLoadTasks = loadTasks();
-var_dump($aLoadTasks);
+$aTasks = loadTasks();
+//var_dump($aTasks);
+
 include 'views/layout.phtml';

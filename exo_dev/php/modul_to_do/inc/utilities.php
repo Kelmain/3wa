@@ -5,7 +5,7 @@
  * Date: 06/03/17
  * Time: 11:29
  */
-const TODO = '../source/todolist.csv';
+define('TODO', __DIR__.'/../source/todolist.csv');
 
 function saveInCSV(array $aDATACsv = array()){
     $rdata = fopen(TODO, 'a+');
@@ -28,7 +28,7 @@ function loadTasks()
     $aTasks = array();
 
     // Ouvertur du fichier
-    $rFile = fopen('source/todolist.csv', 'r');
+    $rFile = fopen(TODO, 'r');
 
     // boucler à l' "infini"
     while (true)
@@ -51,3 +51,4 @@ function loadTasks()
     return $aTasks;
 
 }
+

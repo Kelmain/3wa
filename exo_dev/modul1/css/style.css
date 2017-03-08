@@ -1,80 +1,30 @@
-* {
-    box-sizing: border-box;
-}
+#grille {}
 
-a {
-    color: #2A8782;
-    text-decoration: none;
-    -webkit-transition: text-shadow 0.25s;
-    transition: text-shadow 0.25s;
-}
-
-a:hover {
-    text-shadow: 0 0 4px grey;
-}
-
-body {
-    /* structure */
-    margin: 0 auto;
-    overflow-y: scroll;
-    width: 80%;
-    /* presentation */
-    background: url('../images/concrete_seamless.png') repeat;
-}
-
-body,
-button {
-    font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-    color: #015770;
-    letter-spacing: 0.1em;
-}
-
-header {
-    padding-bottom: 2em;
-}
-
-.hide {
-    display: none;
-}
-
-.slider {
-    -webkit-backface-visibility: hidden;
+#grille input {
+    border: none;
     text-align: center;
-    -webkit-transform: rotate(-3deg);
-    transform: rotate(-3deg);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
 }
 
-.slider figcaption {
-    color: #2A8782;
-    font-size: 2em;
-    font-weight: bold;
-    text-shadow: 0 0 4px grey;
+#grille table {
+    border-collapse: collapse;
+    border: 3px solid #000;
 }
 
-.slider img {
-    background-color: white;
-    padding: 1em;
-    border-radius: 6px;
-    box-shadow: 0 0 8px black;
+#grille table td {
+    border: 1px solid #000;
 }
 
-.toolbar ul {
-    /* structure */
-    padding-left: 0;
-    /* presentation */
-    list-style-type: none;
-    text-align: center;
+#grille table td.borderRightCol {
+    border-right: 3px solid #000;
 }
 
-.toolbar ul li {
-    display: inline-block;
+#grille table td.borderBottomCol {
+    border-bottom: 3px solid #000;
 }
 
-.toolbar ul li + li {
-    margin-left: 1em;
+#grille table td.grey input {
+    background: #ccc;
 }

@@ -1,7 +1,10 @@
 'use strict';
 
 
-function createTable() {
+
+
+
+/*function createTable() {
     var tc = document.getElementById('grille');
 
     //creation tableau HTML
@@ -44,4 +47,4 @@ function getLine() {
 }
 
 
-createTable();
+createTable();*/

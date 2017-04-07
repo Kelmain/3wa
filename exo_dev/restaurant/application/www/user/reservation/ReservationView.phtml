@@ -1,0 +1,38 @@
+<?php if(isset($error_message)){ ?>
+    <p><?= htmlspecialchars($error_message); ?></p>
+<?php } ?>
+<form method="POST" action="">
+
+
+    <fieldset>
+        <label for="BookingTime">BookingTime</label>
+        <input type="time" name="BookingTime" required />
+
+        <label for="BookingDate">Bookingdate</label>
+        <input type="date" name="BookingDate" />
+
+    </fieldset>
+
+    <fieldset>
+        <label for="NumberOfSeats">Seats</label>
+        <input type="number" maxlength="2" name="NumberOfSeats" required/>
+
+
+
+    </fieldset>
+
+
+
+
+
+    <input type="submit"  value="Reservation"/>
+
+    <br />
+    *required
+
+</form>
+
+
+
+
+

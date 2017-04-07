@@ -1,0 +1,33 @@
+<table class="generic-table meal-list">
+    <caption>les Menus</caption>
+    <thead>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Stock</th>
+    <th>Price</th>
+    <th>Sale Price</th>
+
+
+    </thead>
+    <tbody>
+    <?php foreach ($mealsadmin as $iIndex => $aCols) :
+        ?>
+        <tr class="">
+            <td><?= htmlspecialchars ($aCols['Name']); ?>
+                </td>
+            <td><?= htmlspecialchars ($aCols['Description']); ?></td>
+            <td><?= htmlspecialchars ($aCols['QuantityInStock']); ?></td>
+            <td><?= htmlspecialchars ($aCols['BuyPrice']); ?>€</td>
+
+            <td><?= htmlspecialchars ($aCols['SalePrice']); ?>€</td>
+        </tr>
+    <?php endforeach ?>
+
+
+
+
+
+
+    </tbody>
+</table>
+<a  href="<?= $requestUrl ?>/admin/creation" > Creation </a >

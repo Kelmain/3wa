@@ -1,0 +1,28 @@
+<?php include 'header.phtml'; ?>
+<form method="POST" action="">
+	<select name="categ">
+	<?php foreach ($aList as $aCateg) { ?>
+		<option value="<?= $aCateg['id']; ?>"><?= $aCateg['name']; ?></option>
+	<?php } ?>	
+	</select>
+
+	<label>
+		Title : 
+		<input type="text" name="title" />
+	</label>
+
+	<label>
+		Contenu : 
+		<textarea name="content"></textarea>
+	</label>
+
+	<select name="user">
+	<?php foreach ($aListUser as $aUser) { ?>
+		<option value="<?= $aUser['id']; ?>"><?= $aUser['pseudo']; ?></option>
+	<?php } ?>	
+	</select>
+
+	<button type="submit">Enregistrer</button>
+</form>
+
+<?php include 'footer.phtml'; ?>

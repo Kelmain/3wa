@@ -1,0 +1,39 @@
+<?php include 'header.phtml'; ?>
+
+<form method="POST" action="">
+	<select name="categ">
+	<?php foreach ($aList as $aCateg) { 
+		$sSelect = '';
+		if ($aInfosPost['users_id'] == $aUser['id']) {
+			$sSelect = ' selected';
+		}
+	?>
+		<option value="<?= (int) $aCateg['id']; ?>"><?= $aCateg['name']; ?></option>
+	<?php } ?>	
+	</select>
+
+	<label>
+		Title : 
+		<input type="text" name="title" value="<?= htmlspecialchars($aInfosPost['title']);?>" />
+	</label>
+
+	<label>
+		Contenu : 
+		<textarea name="content"><?= htmlspecialchars($aInfosPost['content']);?></textarea>
+	</label>
+
+	<select name="user">
+	<?php foreach ($aListUser as $aUser) { 
+		$sSelect = '';
+		if ($aInfosPost['users_id'] == $aUser['id']) {
+			$sSelect = ' selected';
+		}
+		?>
+		<option<?= $sSelect; ?> value="<?= (int) $aUser['id']; ?>"><?= $aUser['pseudo']; ?></option>
+	<?php } ?>	
+	</select>
+
+	<button type="submit">Enregistrer</button>
+</form>
+
+<?php include 'footer.phtml'; ?>

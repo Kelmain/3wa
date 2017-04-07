@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+
+
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+
+    <title>bons commande</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            bons commande
+    </h1>
+    </header>
+    <main>
+        <table class="table">
+            <caption>Liste des commandes</caption>
+            <thead>
+            <tr>
+                <th>Commande</th>
+                <th>Date de la commande</th>
+                <th>Date de livraison</th>
+                <th>Statute</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($donnees as $iIndex => $aCols) {
+                ?>
+                <tr class="">
+                    <td><a href="inc/orderform.php?orderNumber=<?= $aCols['orderNumber']; ?>"><?= $aCols['orderNumber']; ?></a></td>
+                    <td><?= $aCols['orderDate']; ?></td>
+                    <td><?= $aCols['shippedDate']; ?></td>
+                    <td><?= $aCols['status']; ?></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <!--  <script src="js/general.js" ></script>-->
+
+</body>
+
+</html>
+
+
+
+<!--/* <?php
+header('content-type text/html charset=utf-8');
+
+
+try {
+    $pdo = new PDO('mysql:dbname=classicmodels;host=127.0.0.1', 'root', 'troiswa');
+    $pdo->exec('SET NAMES UTF8');
+} catch (PDOException $e) {
+    echo 'Connexion échouée : ' . $e->getMessage();
+}
+
+
+// si non vide et est un entier
+if (!empty($_GET['orderNumber']) && ctype_digit($_GET['orderNumber']))
+{
+
+    // Preparation de la requete pour les infos de la commande et du client
+    $query = $pdo->prepare('SELECT * FROM orders 
+		INNER JOIN customers 
+			ON orders.customerNumber=customers.customerNumber 
+		WHERE orderNumber=:num_order'
+    );
+
+    // L'execution de la requete avec passage de la valeur via $_GET['orderNumber']
+    $query->execute(array(':num_order' => $_GET['orderNumber']));
+
+    // Fetch récupére uniquement les colonnes (car une seule ligne)
+    $aOrderDetails = $query->fetch(PDO::FETCH_ASSOC);
+
+
+
+    //--------
+
+    // Preparation de la requete pour les détails de la commandes (produits)
+    $query = $pdo->prepare('SELECT * FROM orderdetails 
+		INNER JOIN products 
+			ON orderdetails.productCode=products.productCode 
+		WHERE orderNumber=:num_order'
+    );
+
+    //
+    $query->execute(array(':num_order' => $_GET['orderNumber']));
+
+    // FetchAll récupére toutes les lignes correspondantes à la requete
+    $aProductsOrder = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    // On déclare notre total pour l'incrémenter par la suite
+    $total = 0;
+
+}
+else {
+    // soit un message d'erreur ou une redirection
+}
+
+
+
+
+
+// Ne pas mettre cette ligne !!!! ?>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+    <link rel="stylesheet" href="order-form.css">
+</head>
+<body>
+    <section>
+        <h1>Bons de commande</h1>
+
+        <a href="index.php">Retourner à l'accueil</a>
+
+        <!-- Etiquette avec fiche client -->
+<article class="order-form-customer">
+    <h2><?= $aOrderDetails['customerName'] ?></h2>
+    <h3><?= $aOrderDetails['contactFirstName'] ?> <?= $aOrderDetails['contactLastName'] ?></h3>
+    <p><?= $aOrderDetails['addressLine1'] ?></p>
+    <p><?= $aOrderDetails['addressLine2'] ?></p>
+    <p><?= $aOrderDetails['city'] ?></p>
+</article>
+<hr>
+
+<!-- Le bon de commande -->
+<table class="standard-table">
+    <caption>Bon de commande n° <?= htmlspecialchars($_GET['orderNumber']); ?></caption>
+    <thead>
+    <tr>
+        <th>Produit</th>
+        <th class="money-column">Prix Unitaire</th>
+        <th>Quantité</th>
+        <th class="money-column">Prix Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($aProductsOrder as $orderLine):
+        $fTotalLigne = $orderLine['priceEach']*$orderLine['quantityOrdered'];
+        $total += $fTotalLigne;
+        ?>
+        <tr>
+            <td><?= $orderLine['productName'] ?></td>
+            <td class="money-column"><?= number_format($orderLine['priceEach'], 2) ?> €</td>
+            <td><?= $orderLine['quantityOrdered'] ?></td>
+            <td class="money-column"><?= number_format($fTotalLigne, 2) ?> €</td>
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th colspan="3">Montant Total TTC</th>
+        <!-- Multiplier par 1.20 revient à ajouter 20% à une variable -->
+        <th><?= number_format($total,2) ?> €</th>
+    </tr>
+    </tfoot>
+</table>
+</section>
+</body>
+</html>
+
+*/-->

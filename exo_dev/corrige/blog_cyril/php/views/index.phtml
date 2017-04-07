@@ -1,0 +1,14 @@
+<?php include 'header.phtml'; ?>
+
+<?php foreach($aPosts as $aPost) { ?>
+	<div class="post">
+		<span class="pseudo"><?= htmlspecialchars($aPost['pseudo']); ?></span>
+		<span class="date"><?= 'Le '.date("d/m/Y",strtotime($aPost['date_creation'])).' a '.date("H:i",strtotime($aPost['date_creation'])); ?></span>
+		<span class="title"><?= htmlspecialchars($aPost['title']); ?></span>
+		<span class="delete"><a href="index.php?page=delete_post&id=<?= $aPost['id']; ?>"><i class="fa fa-trash"></i></a></span>
+		<span class="delete"><a href="index.php?page=edit_post&id=<?= $aPost['id']; ?>"><i class="fa fa-pencil"></i></a></span>
+		<p><?= htmlspecialchars($aPost['content']); ?></p>
+	</div>
+<?php } ?>
+
+<?php include 'footer.phtml'; ?>

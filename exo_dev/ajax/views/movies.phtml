@@ -1,0 +1,27 @@
+
+<table class="standard-table">
+    <caption>Films</caption>
+    <thead>
+    <tr>
+        <th>Cover</th>
+        <th class="money-column">title</th>
+        <th>Quantité</th>
+        <th class="money-column">duration</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach($movies as $film){
+        ?>
+
+        <tr>
+            <td><img src="img/<?= $film['cover'] ?>" alt="cover du film <?= ($film['title']) ?>"</td>
+            <td > <?= ($film['title']) ?> </td>
+
+            <td ><?= ($film['duration']) ?> min </td>
+        </tr>
+    <?php } ?>
+    </tbody>
+
+</table>
+
+

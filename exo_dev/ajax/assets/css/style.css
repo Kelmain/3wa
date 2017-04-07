@@ -1,0 +1,90 @@
+*
+{
+    box-sizing: border-box;
+}
+
+
+body
+{
+
+    margin: 0 auto;
+    padding: 1em;
+    width: 80%;
+
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+form
+{
+    margin-top: 2em;
+}
+form fieldset
+{
+    border-color: #3498DB;
+    border-radius: 4px;
+}
+form fieldset legend
+{
+
+    padding: 0 0.5em;
+
+
+    color: #2980B9;
+}
+
+h1
+{
+    color: #E74C3C;
+}
+
+li
+{
+
+    margin: 0.5em 0;
+
+
+    list-style-type: none;
+}
+
+section
+{
+    border: 1px solid #3498DB;
+    border-radius: 4px;
+    padding: 1em;
+    min-width: 4em;
+}
+
+
+.hide
+{
+    display: none;
+}
+
+.movie-list
+{
+
+    padding-left: 0;
+
+
+    list-style-type: none;
+}
+.movie-list li
+{
+
+    display: inline-block;
+    width: 24.5%;
+
+
+    text-align: center;
+}
+.movie-list li p
+{
+    font-size: 0.75em;
+}
+
+.text
+{
+    color: #3498DB;
+    text-align: justify;
+}

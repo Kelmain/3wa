@@ -1,0 +1,41 @@
+<br /><?php if(isset($error_message)){ ?>
+    <p><?= htmlspecialchars($error_message); ?></p>
+<?php } ?><br /><br />
+<form method="POST" action="" enctype="multipart/form-data">
+    <fieldset>
+        <label for="Name">Name</label>
+        <input type="text" name="Name" /><br /> <br />
+        <label for="Description">Description</label>
+      <textarea rows="5" cols="40" name="Description"></textarea>
+
+    </fieldset>
+
+    <fieldset>
+        <label for="QuantityInStock">Quantity In Stock</label>
+        <input type="number" name="QuantityInStock" />
+
+        <label for="BuyPrice">Buy Price</label>
+        <input type="number" name="BuyPrice" />
+
+    </fieldset>
+
+    <fieldset>
+        <label for="SalePrice">Sale Price</label>
+        <input type="number" name="SalePrice" />
+
+
+    </fieldset>
+    <fieldset>
+        <label for="Photo">Photo</label>
+       <!-- <input type="hidden" name="MAX_FILE_SIZE" value="1048576"/>-->
+        <input type="file" name="Photo" />
+
+
+    </fieldset>
+
+
+    <input type="submit"  value="Creation"/>
+    <a  href="<?= $requestUrl ?>/admin/meals" > Retour </a >
+
+
+</form>

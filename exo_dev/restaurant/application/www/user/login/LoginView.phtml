@@ -1,0 +1,14 @@
+<?php if(isset($error_message)){ ?>
+    <p><?= htmlspecialchars($error_message); ?></p>
+<?php } ?>
+<form method="POST" action="">
+    <fieldset>
+        <label for="Email">Email*</label>
+        <input type="email" name="Email" required/>
+
+        <label for="Password">Password*</label>
+        <input type="password" name="Password" required/>
+
+    </fieldset>
+    <input type="submit"  value="Connection"/>
+</form>

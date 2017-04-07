@@ -1,0 +1,39 @@
+
+<table class="generic-table meal-list">
+    <caption>les Utilisateurs</caption>
+<thead>
+<th>Id</th>
+<th>FirstName</th>
+<th>LastName</th>
+<th>Email</th>
+<th>BirthDate</th>
+<th>Address</th>
+<th>ZipCode</th>
+<th>City</th>
+<th>Phone</th>
+<th>Country</th>
+</thead>
+    <?php foreach ($usersadmin as $iIndex => $aCols) :
+        ?>
+        <tr class="">
+            <td><?= htmlspecialchars ($aCols['Id']); ?>
+            </td>
+            <td><?= htmlspecialchars ($aCols['FirstName']); ?></td>
+            <td><?= htmlspecialchars ($aCols['LastName']); ?></td>
+            <td><?= htmlspecialchars ($aCols['Email']); ?></td>
+
+            <td><?= htmlspecialchars ($aCols['BirthDate']); ?></td>
+            <td><?= htmlspecialchars ($aCols['Address']); ?></td>
+            <td><?= htmlspecialchars ($aCols['ZipCode']); ?></td>
+            <td><?= htmlspecialchars ($aCols['City']); ?></td>
+            <td><?= htmlspecialchars ($aCols['Phone']); ?></td>
+            <td><?= htmlspecialchars ($aCols['Country']); ?></td>
+            <td><a  href="<?= $requestUrl ?>/admin/modifier?id=<?= htmlspecialchars ($aCols['Id']); ?>" > Modifier </a ></td>
+            <td><a  href="<?= $requestUrl ?>/admin/delete?id=<?= htmlspecialchars ($aCols['Id']); ?>" > Supprimer </a ></td>
+        </tr>
+    <?php endforeach ?>
+
+    <tbody>
+
+    </tbody>
+</table>

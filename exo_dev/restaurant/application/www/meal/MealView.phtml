@@ -1,0 +1,73 @@
+
+
+<a href="#" class="cart-box" id="cart-info" title="View Cart">
+    <?php
+    if(isset($_SESSION["basket"])){
+        echo count($_SESSION["basket"]);
+    }else{
+        echo 0;
+    }
+    ?>
+</a>
+<div class="shopping-cart-box">
+    <a href="#" class="close-shopping-cart-box" >Close</a>
+    <h3>Your Shopping Cart</h3>
+    <div id="shopping-cart-results">
+    </div>
+</div>
+
+<br />
+<fieldset>
+    <select id="meal" name="menu" >
+        <?php foreach ($meals as $iIndex => $aCols) :?>
+        <option value="<?= htmlspecialchars ($aCols['Id']); ?>"><?= htmlspecialchars ($aCols['Name']); ?></option>
+        <?php endforeach ?>
+    </select>
+</fieldset>
+
+    <table class="generic-table meal-list">
+        <caption>Meal</caption>
+        <thead>
+        <th>Name</th>
+        <th>Description</th>
+
+        <th>Price</th>
+        <th> Price total</th>
+
+
+        </thead>
+        <tbody >
+<tr id="menu">
+    <td><span class="nom"></span>  <img id="photo" src=""/></td>
+    <td class="description"> </td>
+
+    <td class="prize" ></td>
+    <td class="total_prize" ></td>
+
+</tr>
+        </tbody>
+    </table>
+
+<fieldset>
+
+    <select name="qte" id="qte">
+        <option value="1">1</option>
+        <option  value="2">2</option>
+        <option value="3">3</option>
+        <option  value="4">4</option>
+        <option  value="5">5</option>
+        <option value="6">6</option>
+        <option  value="7">7</option>
+        <option  value="8">8</option>
+        <option  value="9">9</option>
+        <option  value="10">10</option>
+
+
+    </select>
+<input id="add_panier" value="Ajouter" type="button"/>
+
+</fieldset>
+
+
+
+

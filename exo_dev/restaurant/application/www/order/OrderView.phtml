@@ -1,0 +1,26 @@
+
+<table class="generic-table meal-list">
+	<thead>
+	<tr><td>Designation</td><td>Prix unitaire</td><td>Quantite</td><td>Total</td><td><td></tr>
+	</thead>
+	<tbody>
+	<?php
+		$fTTC = 0;
+		foreach ($aDataBasket as $aInfosBasket) {
+            $fTotalItem = $aInfosBasket['SalePrice']*$aInfosBasket['quantite'];
+            $fTTC += $fTotalItem;
+            ?>
+            <tr data-id="<?= (int) $aInfosBasket['Id'];?>">
+                <td> <?= htmlspecialchars($aInfosBasket['Name']);?></td>
+                <td><?= htmlspecialchars($aInfosBasket['SalePrice']);?></td>
+                <td><?= htmlspecialchars($aInfosBasket['quantite']);?></td>
+                <td><?= (float) $fTotalItem;?></td>
+
+            </tr>
+        <?php } ?>
+</tbody>
+<tfoot>
+<tr><td colspan="4">Soit un TTC de <?= $fTTC;?></td></tr>
+<tr><td colspan="4">Votre commande a bien été prise en compte</td></tr>
+</tfoot>
+</table>

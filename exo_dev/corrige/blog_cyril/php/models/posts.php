@@ -79,7 +79,7 @@ function updatePost($monPdo, $aParams)
 }
 
 /**
- * delete post
+ * deleteall post
  * @param object connection PDO 
  * @param array contains [':id' => ID_POST]
  */

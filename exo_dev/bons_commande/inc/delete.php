@@ -1,9 +1,9 @@
 <?php
 include 'utilities.php';
 
-if (!empty($_POST['delete'])) {
+if (!empty($_POST['deleteall'])) {
     $aTmpTasks = loadTasks();
-    $aTasks = delete($aTmpTasks, $_POST['delete']);
+    $aTasks = delete($aTmpTasks, $_POST['deleteall']);
     $rFile = fopen(TODO, 'w');
 
 foreach ($aTasks as $iLigne =>$aCols){
@@ -28,8 +28,8 @@ $aTasks = array();
 }
 
 header('location:../index.php');
-/*if (isset($_POST['delete'])){
-    var_dump($_POST['delete']);
+/*if (isset($_POST['deleteall'])){
+    var_dump($_POST['deleteall']);
 
 
 }*/

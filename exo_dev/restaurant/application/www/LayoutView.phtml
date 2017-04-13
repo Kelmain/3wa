@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-button.css">
     <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-form.css">
     <link rel="stylesheet" href="<?= $wwwUrl ?>/css/ui-table.css">
-    <!--<link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">-->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
 
     <!-- Librairie jQuery -->
@@ -20,6 +20,8 @@
 
     <!-- JavaScript de l'application -->
     <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+    <script src="<?= $wwwUrl ?>/js/classes/FormValidator.class.js"></script>
+
 </head>
 <body>
 
@@ -45,6 +47,7 @@ if (isset($isconnected) && $isconnected == true){ ?>
            <li><a class="button" href="<?= $requestUrl ?>/admin/users" > Users </a ></li>
            <li><a class="button" href="<?= $requestUrl ?>/admin/meals" > Meals </a ></li>
     <li><a class="button" href="<?= $requestUrl ?>/user/reservation" >Reservation </a></li>
+    <li><a class="button" href="<?= $requestUrl ?>/meal" >Commande</a></li>
 
 <?php }else { ?>
         <li> <a class="button" href="<?= $requestUrl ?>/user" > Sign Up </a></li>
@@ -57,6 +60,7 @@ if (isset($isconnected) && $isconnected == true){ ?>
 <main>
     <!-- Affichage du template lié à la vue -->
     <?php include $this->viewData['template'] ?>
+
 </main>
 
 <!-- Pied de page commun -->

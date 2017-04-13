@@ -1,0 +1,24 @@
+
+<ul class="view-cart">
+<?php
+$fTTC = 0;
+foreach ($aDataBasket as $iIndex => $aCols) :
+    $fTotalItem = $aCols['SalePrice']*$aCols['quantite'];
+     $fTTC += $fTotalItem;
+?>
+
+
+
+
+    <li data-id="<?= htmlspecialchars($aCols['Id']);?>"> Name:<?= htmlspecialchars($aCols['Name']); ?> Prix€/unite:<?= htmlspecialchars($aCols['SalePrice']); ?> Qty : <?= htmlspecialchars($aCols['quantite']); ?>  Prixtotal:<?= $fTotalItem; ?>. "
+
+        <i class="fa fa-trash del" aria-hidden="true"></i>
+    </li>
+    <hr>
+
+
+<?php endforeach ?>
+</ul>
+<div class="cart-products-total">Total :<?= $fTTC; ?> <u>
+      <form action="<?= $requestUrl; ?>/order" method="POST" ><input type="submit" value="Check-Out" id="save_panier"></u></form>
+    <a class="button" href="<?= $requestUrl ?>/basket/deleteall" > Delete All </a ></div>

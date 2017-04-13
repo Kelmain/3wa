@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 04 Avril 2017 à 10:41
+-- Généré le: Jeu 13 Avril 2017 à 15:10
 -- Version du serveur: 5.5.54-0ubuntu0.14.04.1
 -- Version de PHP: 5.5.9-1ubuntu4.20
 
@@ -35,7 +35,23 @@ CREATE TABLE IF NOT EXISTS `Booking` (
   `CreationTimestamp` datetime NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `User_Id` (`User_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+
+--
+-- Contenu de la table `Booking`
+--
+
+INSERT INTO `Booking` (`Id`, `BookingDate`, `BookingTime`, `NumberOfSeats`, `User_Id`, `CreationTimestamp`) VALUES
+(1, '2017-04-26', '02:56:00', 4, 13, '2017-04-07 15:19:21'),
+(2, '2017-04-06', '03:56:00', 2, 13, '2017-04-07 15:34:27'),
+(3, '2017-04-06', '01:57:00', 3, 13, '2017-04-07 15:35:49'),
+(4, '2017-04-14', '00:54:00', 2, 13, '2017-04-07 15:48:01'),
+(5, '2017-04-12', '05:54:00', 45, 13, '2017-04-07 15:48:10'),
+(6, '2017-04-12', '05:45:00', 127, 13, '2017-04-07 15:49:07'),
+(7, '2017-04-07', '11:02:00', 2, 13, '2017-04-07 15:49:56'),
+(8, '2017-04-04', '05:46:00', 5, 13, '2017-04-07 15:53:17'),
+(18, '2017-04-07', '20:00:00', 2, 13, '2017-04-07 16:51:43'),
+(19, '2017-04-07', '20:00:00', 2, 13, '2017-04-07 16:57:13');
 
 -- --------------------------------------------------------
 
@@ -83,7 +99,16 @@ CREATE TABLE IF NOT EXISTS `Order` (
   `CompleteTimestamp` datetime NOT NULL,
   PRIMARY KEY (`Id`),
   KEY `User_Id` (`User_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `Order`
+--
+
+INSERT INTO `Order` (`Id`, `User_Id`, `TotalAmount`, `TaxRate`, `TaxAmount`, `CreationTimestamp`, `CompleteTimestamp`) VALUES
+(1, 13, 15.5, 5.5, 0.8525, '2017-04-13 09:50:02', '2017-04-13 09:50:02'),
+(2, 13, 15.5, 5.5, 0.8525, '2017-04-13 10:10:33', '2017-04-13 10:10:33'),
+(3, 13, 167.5, 5.5, 9.2125, '2017-04-13 10:10:51', '2017-04-13 10:10:51');
 
 -- --------------------------------------------------------
 
@@ -101,7 +126,19 @@ CREATE TABLE IF NOT EXISTS `OrderLine` (
   UNIQUE KEY `UniciteMealOrder` (`Meal_Id`,`Order_Id`),
   KEY `Meal_Id` (`Meal_Id`),
   KEY `Order_Id` (`Order_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Contenu de la table `OrderLine`
+--
+
+INSERT INTO `OrderLine` (`Id`, `QuantityOrdered`, `Meal_Id`, `Order_Id`, `PriceEach`) VALUES
+(1, 1, 1, 1, 3),
+(2, 1, 3, 1, 12.5),
+(3, 1, 1, 2, 3),
+(4, 1, 3, 2, 12.5),
+(5, 10, 4, 3, 6.75),
+(6, 8, 3, 3, 12.5);
 
 -- --------------------------------------------------------
 
@@ -114,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `User` (
   `FirstName` varchar(40) NOT NULL,
   `LastName` varchar(20) NOT NULL,
   `Email` varchar(50) NOT NULL,
-  `Password` varchar(64) NOT NULL,
+  `Password` varchar(255) NOT NULL,
   `BirthDate` date NOT NULL,
   `Address` varchar(250) NOT NULL,
   `City` varchar(40) NOT NULL,
@@ -125,7 +162,15 @@ CREATE TABLE IF NOT EXISTS `User` (
   `LastLoginTimestamp` datetime DEFAULT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Email` (`Email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+
+--
+-- Contenu de la table `User`
+--
+
+INSERT INTO `User` (`Id`, `FirstName`, `LastName`, `Email`, `Password`, `BirthDate`, `Address`, `City`, `ZipCode`, `Country`, `Phone`, `CreationTimestamp`, `LastLoginTimestamp`) VALUES
+(11, 'test', 'erzerzer', 'test@test.fr', '$2y$10$sNUtHyQmu9TG5HzjFicMPOh4YFW63IlPFiQh6wf5CSKoRgj0Vs7t2', '2017-04-26', 'etete', 'tetetet', '12345', 'tetete', '0125362514', '2017-04-06 11:13:42', NULL),
+(13, 'tertret', 'trret', 'test2@test.fr', '$2y$10$zglt5XnqXuRmQJUVqKUG6OLh6GwOjBf4BTqDiSeY3bYHgbLe.arVS', '2017-04-27', 'erzr', 'rezrzr', '54789', 'zerzerez', '0125362514', '2017-04-07 10:34:19', NULL);
 
 --
 -- Contraintes pour les tables exportées

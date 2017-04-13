@@ -47,7 +47,10 @@ if ($formFields['Password'] != $formFields['controllpwd']){
 
     }
     catch(DomainException $e){
-        return ['error_message' => $e->getMessage()];
+
+        return array_merge(
+            $formFields,
+            ['error_message' => $e->getMessage()]);
     }
 }
 

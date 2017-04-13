@@ -6,7 +6,7 @@ if (isset ($_GET['tab']))
     switch($_GET['tab']){
         case 'add':
         case 'user':
-        case 'delete':
+        case 'deleteall':
         case 'edit':
             require 'inc/'.$_GET['tab'].'.php';
             break;

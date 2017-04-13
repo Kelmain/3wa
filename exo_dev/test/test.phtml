@@ -1,0 +1,21 @@
+<?php
+$aPersons = [   'Adi', 'Mickael', 'Monia', 'Coraline', 'Lisa', 'Alex', 'Doriane', 'Tommy',
+    'Cyril', 'Garry', 'Armin', 'Pascal', 'Charles', 'Arnaud' ];
+
+$bGarryIsHere = true;
+$sCeQueAdiDit = 'bonjour';
+$key=array_search('Garry',$aPersons);
+$sMessage = '';
+
+if(!$bGarryIsHere){
+    unset($aPersons[$key]);
+
+}
+
+
+foreach ($aPersons as $sName) {
+    $sMessage = $sName.' a dit '.$sCeQueAdiDit;
+    $sCeQueAdiDit = $sMessage;
+
+    echo ($sMessage. '<br />');
+}

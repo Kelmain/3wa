@@ -7,7 +7,7 @@ function onClickDelete(){
     var id;
     id = $(this).data('id');
     var parent = $(this).parents('tr');
-    $.get('inc/delete.php',{'id' : id}, function () {
+    $.get('inc/deleteall.php',{'id' : id}, function () {
            parent.remove();
         });
 }
